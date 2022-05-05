@@ -12,19 +12,16 @@
  * @param {number} sum
  * @return {number}
  */
-var getPathSum = function (root, sum) {
+var dfs = function (root, sum) {
 	if (root === null) return 0;
 	let value = sum - root.val;
-	return (
-		(root.val == sum) +
-		getPathSum(root.left, value) +
-		getPathSum(root.right, value)
-	);
+	// let a = root.val === sum ? 1 : 0;
+	// return a + dfs(root.left, value) + dfs(root.right, value);
+	return (root.val === sum) + dfs(root.left, value) + dfs(root.right, value);
 };
 
 var pathSum = function (root, sum) {
 	if (root === null) return 0;
-	let a = getPathSum(root, sum);
-	console.log(a);
-	return a + pathSum(root.left, sum) + pathSum(root.right, sum);
+
+	return dfs(root, sum) + pathSum(root.left, sum) + pathSum(root.right, sum);
 };
