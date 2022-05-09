@@ -15,6 +15,7 @@ var search = function (nums, target) {
 	let l = 0,
 		r = nums.length - 1,
 		mid;
+	// 当区间两端都不等于 target，把两端分别往之间移动，确保最前面的大于最后面的，而不是相同的值
 	while (l < nums.length && nums[0] === nums[l]) l++;
 	while (r >= 0 && nums[0] === nums[r]) r--;
 	const head = l,
