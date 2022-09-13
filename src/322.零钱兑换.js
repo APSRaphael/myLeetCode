@@ -17,11 +17,7 @@ var coinChange = function (coins, amount) {
 	for (let i = 0; i < dp.length; i++) {
 		for (let j = 0; j < coins.length; j++) {
 			if (i - coins[j] >= 0) {
-				console.log('rount start i :>> ', i); // hk-log
-				console.log('dp[i] :>> ', dp[i]); // hk-log
 				dp[i] = Math.min(dp[i], dp[i - coins[j]] + 1);
-				console.log('dp :>> ', dp); // hk-log
-				console.log('rount end j :>> ', j); // hk-log
 			}
 		}
 	}

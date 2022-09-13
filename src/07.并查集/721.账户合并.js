@@ -4,6 +4,17 @@
  * [721] 账户合并
  */
 
+arr = [
+	{ id: 2, parentId: 0 },
+	{ id: 1, parentId: 2 },
+	{ id: 3, parentId: 2 },
+	{ id: 4, parentId: 3 },
+	{ id: 6, parentId: 5 },
+];
+// 使用 Map
+// 先记录所有 parentId
+
+
 // @lc code=start
 /**
  * @param {string[][]} accounts
@@ -29,8 +40,8 @@ var accountsMerge = function (accounts) {
 	const accountMap = new Map();
 	const parent = uf.parent;
 	for (let i = 0; i < parent.length; i++) {
-        // 先更新所有 parent 的 value， 统一所有相关联的值
-        parent[i] = uf.findSet(i)
+		// 先更新所有 parent 的 value， 统一所有相关联的值
+		parent[i] = uf.findSet(i);
 		if (accountMap.has(parent[i])) {
 			const arr = Array.from(
 				new Set(accountMap.get(parent[i]).concat(accounts[i]))
@@ -92,3 +103,34 @@ class UnionFind {
 }
 
 // @lc code=end
+
+
+arr = [
+	{ id: 2, parentId: 0 },
+	{ id: 1, parentId: 2 },
+	{ id: 3, parentId: 2 },
+	{ id: 4, parentId: 3 },
+	{ id: 6, parentId: 5 },
+];
+// 使用 Map
+// 先记录所有 parentId
+const map = new Map([])
+for (let i = 0; i < arr.length; i++) {
+	const el = arr[i];
+	map.set(el.id, el.parentId)
+}
+console.log('map :>> ', map); // hk-log
+
+const getTree = (id)=>{
+	if(map.has(id)){
+		const parentId = map.get(id)
+		map.set(id,)
+	}
+}
+const has = map.has(4)
+const parentId = map.get(2)
+console.log('has :>> ', has); // hk-log
+console.log('parentId :>> ', parentId); // hk-log
+
+const has2 = map.has(parentId)
+console.log('has2 :>> ', has2); // hk-log
