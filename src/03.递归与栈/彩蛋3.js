@@ -1,11 +1,11 @@
 /*
- * @Author: wb-hk750148@alibaba-inc.com
+ * @Author: raphael
  * @Date: 2021-04-26 18:59:17
  * @LastEditTime: 2021-04-26 19:05:19
- * @LastEditors: wb-hk750148@alibaba-inc.com
- * @Description:  
+ * @LastEditors: raphael
+ * @Description:
  */
- 
+
  var handle = function (str) {
      const stack = [];
      const arr = [];
@@ -36,7 +36,7 @@
      });
      return sum
  };
- 
+
  const str = `push 773
  pop
  push 134
@@ -13410,4 +13410,3 @@
  pop
  pop`;
  // handle(str);
- 

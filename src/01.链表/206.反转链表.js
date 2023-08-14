@@ -1,11 +1,4 @@
 /*
- * @Author: wb-hk750148@alibaba-inc.com
- * @Date: 2021-03-10 15:06:41
- * @LastEditTime: 2021-08-30 14:17:34
- * @LastEditors: wb-hk750148@alibaba-inc.com
- * @Description:
- */
-/*
  * @lc app=leetcode.cn id=206 lang=javascript
  *
  * [206] 反转链表
@@ -23,7 +16,24 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-// var reverseList = function (head) {
+var reverseList = function (head) {
+	if (!head) return null;
+	let pre = null,
+		cur = head;
+	while (cur) {
+		[cur.next, pre, cur] = [pre, cur, cur.next];
+
+		// const temp = cur.next;
+		// cur.next = pre;
+		// pre = cur;
+		// cur = temp
+	}
+	return pre;
+};
+
+// @lc code=end
+
+var reverseList = function (head) {
 	if (!head) return null;
 	let pre = null,
 		cur = head;
@@ -32,5 +42,3 @@
 	}
 	return pre;
 };
-
-// @lc code=end

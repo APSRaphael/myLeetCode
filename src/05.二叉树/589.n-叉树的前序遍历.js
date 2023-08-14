@@ -1,8 +1,8 @@
 /*
- * @Author: wb-hk750148@alibaba-inc.com
+ * @Author: raphael
  * @Date: 2021-04-08 00:38:14
  * @LastEditTime: 2021-04-17 14:36:11
- * @LastEditors: wb-hk750148@alibaba-inc.com
+ * @LastEditors: raphael
  * @Description:
  */
 /*
@@ -34,7 +34,7 @@ var order = (root, arr) => {
 	if (!root) return null;
 	arr.push(root.val);
 	for (const node of root.children) {
-		order(node,arr)	
+		order(node,arr)
 	}
 };
 // @lc code=end

@@ -1,11 +1,4 @@
 /*
- * @Author: wb-hk750148@alibaba-inc.com
- * @Date: 2021-03-10 15:13:01
- * @LastEditTime: 2021-03-12 16:25:44
- * @LastEditors: wb-hk750148@alibaba-inc.com
- * @Description:
- */
-/*
  * @lc app=leetcode.cn id=92 lang=javascript
  *
  * [92] 反转链表 II
